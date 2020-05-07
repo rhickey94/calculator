@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: rgb(22, 22, 22);
+    text-align: center;
+}
+
+.spacer {
+    height: 100px;
+}
+
+.button {
+    width: 75px;
+    height: 75px;
+    border: 0;
+    -webkit-box-shadow: 3px 4px 9px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 9px -5px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 9px -5px rgba(0,0,0,0.75);
+}
+
+.number {
+    background: #474646;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.operator {
+    background: coral;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+}
+
+.clear {
+    background: darkgray;
+    color: black;
+    font-size: 1.25rem;
+    border-radius: 50%;
+}
+
+.zero {
+    background: #474646;
+    color: white;
+    width: 188px;
+    text-align: left;
+    border-radius: 500px;
+    font-size: 1.5rem;
+    padding-left: 25px;
+}
+
+.calculator  {
+    margin: auto;
+    height: 768px;
+    width: 512px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+.display {
+    grid-column: span 4;
+    text-align: right;
+    font-size: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    height: 165px;
+}
+
+.misc {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.numbers {
+    grid-column: 1 / 4;
+    grid-row: 3 / 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.operators {
+    grid-column: 4 / 5;
+    grid-row: 2 / 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pressed {
+    opacity: 0.5;
+}
+
+:disabled {
+    opacity: 0;
+}
